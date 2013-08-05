@@ -1,0 +1,36 @@
+--- image.php	2012-08-15 02:18:55.000000000 -0700
++++ image.php.new	2012-08-15 02:11:01.000000000 -0700
+@@ -10,15 +10,24 @@
+ 
+ ini_set("memory_limit", -1);
+ 
+-$image = $_GET["image"];
+-$width = $_GET["width"];
+-$height = $_GET["height"];
+-$quality = $_GET["quality"];
+-$degrees = $_GET["degrees"];
+-$scale = $_GET["scale"];
+-$maintain_aspect = $_GET["maintain_aspect"];
+-$grayscale = $_GET["grayscale"];
+-$crop = $_GET["crop"];
++if(isset($_GET["image"]))
++	$image = $_GET["image"];
++if(isset($_GET["width"]))
++	$width = $_GET["width"];
++if(isset($_GET["height"]))
++	$height = $_GET["height"];
++if(isset($_GET["quality"]))
++	$quality = $_GET["quality"];
++if(isset($_GET["degrees"]))
++	$degrees = $_GET["degrees"];
++if(isset($_GET["scale"]))
++	$scale = $_GET["scale"];
++if(isset($_GET["maintain_aspect"]))
++	$maintain_aspect = $_GET["maintain_aspect"];
++if(isset($_GET["grayscale"]))
++	$grayscale = $_GET["grayscale"];
++if(isset($_GET["crop"]))
++	$crop = $_GET["crop"];
+ 
+ $original_x = $_GET["width"];
+ $original_y = $_GET["height"];
